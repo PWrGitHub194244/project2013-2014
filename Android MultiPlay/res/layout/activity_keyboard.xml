@@ -126,15 +126,6 @@
         android:text="pause" />
 
     <Button
-        android:id="@+id/home"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/pause"
-        android:layout_toRightOf="@+id/pause"
-        android:text="home" />
-
-    <Button
         android:id="@+id/tyld"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -507,44 +498,6 @@
         android:text="SPACE" />
 
     <Button
-        android:id="@+id/numlock"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/backspace"
-        android:layout_toRightOf="@+id/backspace"
-        android:text="NUM LOCK" />
-
-    <Button
-        android:id="@+id/end"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/numlock"
-        android:layout_toRightOf="@+id/home"
-        android:text="end" />
-
-    <Button
-        android:id="@+id/pgup"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/numlock"
-        android:layout_alignBottom="@+id/numlock"
-        android:layout_alignRight="@+id/end"
-        android:text="pgup" />
-
-    <Button
-        android:id="@+id/pgdw"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/pgup"
-        android:layout_alignTop="@+id/end"
-        android:layout_toRightOf="@+id/end"
-        android:text="pgdn" />
-
-    <Button
         android:id="@+id/enterb"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -552,6 +505,8 @@
         android:layout_alignBaseline="@+id/apostrof"
         android:layout_alignBottom="@+id/apostrof"
         android:layout_toRightOf="@+id/apostrof"
+                android:onClick="onClick"
+        
         android:text="ENTER" />
 
     <Button
@@ -735,160 +690,22 @@
         android:text="CTRL" />
 
     <Button
-        android:id="@+id/downb"
+        android:id="@+id/LPM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/pause"
-        android:layout_below="@+id/upb"
-        android:layout_toRightOf="@+id/leftb"
-        android:text="v" />
+        android:layout_alignBaseline="@+id/leftb"
+        android:layout_alignBottom="@+id/leftb"
+        android:layout_alignRight="@+id/g"
+        android:text="LPM" />
 
     <Button
-        android:id="@+id/upb"
+        android:id="@+id/PPM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/del"
-        android:layout_alignRight="@+id/downb"
-        android:layout_toRightOf="@+id/rshift"
-        android:text="^" />
-
-    <Button
-        android:id="@+id/rightb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/downb"
-        android:layout_alignBottom="@+id/downb"
-        android:layout_toLeftOf="@+id/end"
-        android:layout_toRightOf="@+id/downb"
-        android:text=">" />
-
-    <Button
-        android:id="@+id/numsix"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/numfive"
-        android:layout_toRightOf="@+id/numfive"
-        android:text="6" />
-
-    <Button
-        android:id="@+id/numtwo"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/numfive"
-        android:layout_alignTop="@+id/numone"
-        android:text="2" />
-
-    <Button
-        android:id="@+id/numthree"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/rightb"
-        android:layout_alignLeft="@+id/numsix"
-        android:text="3" />
-
-    <Button
-        android:id="@+id/numrazy"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/numlock"
-        android:layout_toRightOf="@+id/numdziel"
-        android:text="*" />
-
-    <Button
-        android:id="@+id/numplus"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/numenter"
-        android:layout_alignLeft="@+id/numenter"
-        android:layout_alignRight="@+id/pgdw"
-        android:layout_alignTop="@+id/numminus"
-        android:text="+" />
-
-    <Button
-        android:id="@+id/numfour"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/numseven"
-        android:layout_below="@+id/enterb"
-        android:text="4" />
-
-    <Button
-        android:id="@+id/numdziel"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/numone"
-        android:layout_below="@+id/numlock"
-        android:text="/" />
-
-    <Button
-        android:id="@+id/numeight"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/numrazy"
-        android:layout_toRightOf="@+id/numdziel"
-        android:text="8" />
-
-    <Button
-        android:id="@+id/numseven"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/numfour"
-        android:layout_toLeftOf="@+id/numeight"
-        android:text="7" />
-
-    <Button
-        android:id="@+id/numfive"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/numtwo"
-        android:layout_alignLeft="@+id/numeight"
-        android:text="5" />
-
-    <Button
-        android:id="@+id/numnine"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/numsix"
-        android:layout_alignLeft="@+id/numsix"
-        android:text="9" />
-
-    <Button
-        android:id="@+id/numminus"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/numnine"
-        android:layout_below="@+id/pgup"
-        android:text="-" />
-
-    <Button
-        android:id="@+id/numone"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/rightb"
-        android:layout_alignLeft="@+id/rightb"
-        android:text="1" />
-
-    <Button
-        android:id="@+id/numenter"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/numthree"
-        android:layout_toRightOf="@+id/numsix"
-        android:text="ENTER" />
+        android:layout_alignBaseline="@+id/LPM"
+        android:layout_alignBottom="@+id/LPM"
+        android:layout_toLeftOf="@+id/zero"
+        android:text="PPM" />
 
     <Button
         android:id="@+id/leftb"
@@ -896,8 +713,77 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/downb"
         android:layout_alignBottom="@+id/downb"
-        android:layout_alignLeft="@+id/del"
-        android:layout_alignRight="@+id/del"
+        android:layout_toLeftOf="@+id/downb"
+        android:layout_toRightOf="@+id/f10"
+        android:onClick="onClick"
         android:text="&lt;" />
+
+    <Button
+        android:id="@+id/downb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/del"
+        android:layout_toRightOf="@+id/del"
+        android:onClick="onClick"
+        android:text="v" />
+
+    <Button
+        android:id="@+id/upb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/del"
+        android:layout_alignLeft="@+id/downb"
+        android:layout_alignRight="@+id/downb"
+        android:onClick="onClick"
+        android:text="^" />
+
+    <Button
+        android:id="@+id/numrazy"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lctrl"
+        android:layout_below="@+id/lctrl"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/numplus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/numrazy"
+        android:layout_alignBottom="@+id/numrazy"
+        android:layout_toLeftOf="@+id/a"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/rightb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/downb"
+        android:layout_alignBottom="@+id/downb"
+        android:layout_toRightOf="@+id/downb"
+        android:onClick="onClick"
+        android:text=">" />
+
+    <Button
+        android:id="@+id/end"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/pause"
+        android:layout_below="@+id/home"
+        android:layout_toRightOf="@+id/enterb"
+        android:text="end" />
+
+    <Button
+        android:id="@+id/home"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/backspace"
+        android:layout_alignBottom="@+id/backspace"
+        android:layout_toRightOf="@+id/backspace"
+        android:text="home" />
 
 </RelativeLayout>

@@ -25,7 +25,7 @@ public class FirstMenu extends Activity {
 		button1 = (Button) super.findViewById(R.id.keyboardb);
 		button2 = (Button) super.findViewById(R.id.mouseb);
 		button3 = (Button) super.findViewById(R.id.gyromouse);
-		ip="192.168.1.100";
+		ip="192.168.1.101";
 
 	}
 

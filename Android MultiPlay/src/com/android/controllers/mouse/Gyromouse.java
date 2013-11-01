@@ -2,10 +2,6 @@ package com.android.controllers.mouse;
 
 import com.android.multiplay.R;
 import com.android.multiplay.Sender;
-import com.android.multiplay.R.id;
-import com.android.multiplay.R.layout;
-import com.android.multiplay.R.menu;
-
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -24,7 +20,9 @@ public class Gyromouse extends Activity  implements SensorEventListener {
 		private String ip;
 		Bundle bundle;
 		private Button button;
-		int stop;
+		private Button button1, button2, button3, button4, button5;
+
+		int stopy;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,7 +31,13 @@ public class Gyromouse extends Activity  implements SensorEventListener {
 		bundle = super.getIntent().getExtras();
 		ip = bundle.getString("ip");
         tv=(TextView)findViewById(R.id.pochyl); 
-        stop=0;
+        stopy=0;
+        ip = bundle.getString("ip");
+		button1 = (Button) super.findViewById(R.id.leftb);		//przyciski przykładowe do klawiatury które 
+		button2 = (Button) super.findViewById(R.id.rightb);		//należy dodać w przyszłości
+		button3 = (Button) super.findViewById(R.id.upb);			//do wysyłania jest ju prawie zainplementowane
+		button4 = (Button) super.findViewById(R.id.downb);		//wystarczy dodać kilka if'ow
+		button5 = (Button) super.findViewById(R.id.enterb);
         sm=(SensorManager)this.getSystemService(Context.SENSOR_SERVICE); 
 
         sm.registerListener(this,sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
@@ -58,8 +62,8 @@ public class Gyromouse extends Activity  implements SensorEventListener {
 	public void onSensorChanged(SensorEvent arg0) {
 		 float x=arg0.values[0]; 
 	        float y=arg0.values[1]; 
-	       if(stop==0){
-	        tv.setText("X: "+x+" Y: "+y);
+	       if(!tv.getText().equals("stop")){
+	       // tv.setText("X: "+x+" Y: "+y);
 	        Sender sender = new Sender();
 			sender.setip(ip);
 			sender.getxy((int)y, (int)x);
@@ -71,13 +75,39 @@ public class Gyromouse extends Activity  implements SensorEventListener {
 	public void onClick(View arg0) {
 		switch (arg0.getId()) {
 		case R.id.stop:
-			if(stop==0){
-				stop=1;
+			if(!tv.getText().equals("stop")){
+				tv.setText("stop");
 			}
-			else{
-				stop=0;
+			else if(tv.getText().equals("stop")){
+				tv.setText("start");
 			}
 			break;
+		
+	case R.id.leftb:
+		Sender sender = new Sender();
+		sender.setip(ip);
+		sender.execute("keyboard", "left");
+		break;
+	case R.id.rightb:
+		Sender sender2 = new Sender();
+		sender2.setip(ip);
+		sender2.execute("keyboard", "right");
+		break;
+	case R.id.upb:
+		Sender sender3 = new Sender();
+		sender3.setip(ip);						//wywyla odpowiednie klawisze poprzez klase Sender
+		sender3.execute("keyboard", "up");
+		break;
+	case R.id.downb:
+		Sender sender4 = new Sender();
+		sender4.setip(ip);
+		sender4.execute("keyboard", "down");
+		break;
+	case R.id.enterb:
+		Sender sender5 = new Sender();
+		sender5.setip(ip);
+		sender5.execute("keyboard", "enter");
+		break;
 		}
 	}
 
