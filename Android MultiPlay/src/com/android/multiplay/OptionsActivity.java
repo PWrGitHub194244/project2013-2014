@@ -21,26 +21,26 @@ public class OptionsActivity extends Activity {
 
 //		search = (Button) super.findViewById(R.id.search);
 //		IP = (EditText) super.findViewById(R.id.IPeditText);
-//		nextButton = (Button) super.findViewById(R.id.imageButton1);
+//	nextButton = (Button) super.findViewById(R.id.imageButton1);
 	}
-
-//	public void onClick(View arg0) {
-//		switch (arg0.getId()) {
-//		case R.id.imageButton1:
-//			if (IP.getText().toString().equals("")) {
-//				Toast.makeText(this, "Brak IP ", Toast.LENGTH_LONG).show();
-//			} else {
-//				Intent intent = new Intent(this, FirstMenu.class);
-//				intent.putExtra("ip", IP.getText().toString());
-//				super.startActivity(intent);
-//			}
-//			break;
-//		case R.id.search:
-//			Intent intent = new Intent(this, FirstMenu.class);
-//			
-//			super.startActivity(intent);
-//			break;
-//		}
-//	}
-
+/*
+	public void onClick(View arg0) {
+		switch (arg0.getId()) {
+		case R.id.imageButton1:
+			if (IP.getText().toString().equals("")) {
+				Toast.makeText(this, "Brak IP ", Toast.LENGTH_LONG).show();
+			} else {
+				Intent intent = new Intent(this, FirstMenu.class);
+				intent.putExtra("ip", IP.getText().toString());
+				super.startActivity(intent);
+			}
+			break;
+		case R.id.search:
+			Intent intent = new Intent(this, FirstMenu.class);
+			
+			super.startActivity(intent);
+			break;
+		}
+	}
+*/
 }
