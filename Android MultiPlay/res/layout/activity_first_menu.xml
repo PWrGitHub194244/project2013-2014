@@ -37,4 +37,13 @@
         android:onClick="onClick"
         android:text="gyromouse" />
 
+    <Button
+        android:id="@+id/steeringwheels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mouseb"
+        android:layout_toLeftOf="@+id/gyromouse"
+        android:onClick="onClick"
+        android:text="joystick" />
+
 </RelativeLayout>

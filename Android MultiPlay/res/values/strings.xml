@@ -22,5 +22,6 @@
     <string name="title_activity_gyromouse">Gyromouse</string>
     <string name="title_activity_collection">Collection</string>
     <string name="title_activity_steeringwheel">SteeringwheelActivity</string>
+    <string name="title_activity_joystick">Joystick</string>
 
 </resources>

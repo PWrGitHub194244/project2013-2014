@@ -10,22 +10,25 @@ import android.widget.Button;
 import com.android.controllers.keyboard.KeyboardActivity;
 import com.android.controllers.mouse.Gyromouse;
 import com.android.controllers.mouse.MouseActivity;
+import com.android.controllers.steeringwheel.SteeringwheelActivity;
 
 public class FirstMenu extends Activity {
 	Bundle bundle;
-	private Button button1, button2,button3;
+	private Button button1, button2, button3, button4;
 	private String ip;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first_menu);
-		//bundle = super.getIntent().getExtras();
-		//ip = bundle.getString("ip");
+		// bundle = super.getIntent().getExtras();
+		// ip = bundle.getString("ip");
 		button1 = (Button) super.findViewById(R.id.keyboardb);
 		button2 = (Button) super.findViewById(R.id.mouseb);
 		button3 = (Button) super.findViewById(R.id.gyromouse);
-		ip="192.168.1.101";
+		button4 = (Button) super.findViewById(R.id.steeringwheels);
+
+		ip = "192.168.1.101";
 
 	}
 
@@ -46,6 +49,13 @@ public class FirstMenu extends Activity {
 			intent.putExtra("ip", ip);
 
 			super.startActivity(intent);
+			break;
+		case R.id.steeringwheels:
+			intent = new Intent(this, SteeringwheelActivity.class);
+		//	intent.putExtra("ip", ip);
+
+			super.startActivity(intent);
+			break;
 
 		}
 	}

@@ -93,9 +93,8 @@
         </activity>
         <activity
             android:name="com.android.controllers.mouse.Gyromouse"
-            android:label="@string/title_activity_gyromouse" 
+            android:label="@string/title_activity_gyromouse"
             android:screenOrientation="landscape" >
-            
         </activity>
         <activity
             android:name="com.android.controllers.keyboard.Collection"
@@ -104,6 +103,10 @@
         <activity
             android:name="com.android.controllers.steeringwheel.SteeringwheelActivity"
             android:label="@string/title_activity_steeringwheel" >
+        </activity>
+        <activity
+            android:name="com.android.controllers.joystick.Joystick"
+            android:label="@string/title_activity_joystick" >
         </activity>
     </application>
 
